@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        title{
+           font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        body{
+            background-color: rgb(228, 150, 150);
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            margin-top: 300px; 
+            /* overflow: hidden; */
+        }
+    .but
+    {
+        /* background-color: rgb(255, 255, 255); */
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        width: 170px;
+        height: auto;
+        margin-left: -200px;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+       /* margin-top: 300px; */
+        /* overflow: hidden; */
+    }
+    .text{
+        height: 100px;
+    }
+
+    </style>
+</head>
+<body>
+    <span class="text">кнопка считает количество кликов</span>
+    <input type="button" onclick="clickCounter()" class="but">
+   
+    <script>
+        let clicker = +localStorage.getItem('clicker');
+
+    const button = document.querySelector('input[type="button"]');
+    button.value = `${clicker}`;
+
+    function clickCounter() {
+        localStorage.setItem('clicker', ++clicker);
+    button.value = `${clicker}`
+ 
+  
+}
+
+    </script>
+    
+</body>
+</html>
